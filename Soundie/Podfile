@@ -1,0 +1,5 @@
+'https://github.com/vokalinteractive/PrivatePodspecRepo-iOS.git'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+
+pod 'Vokoder'
