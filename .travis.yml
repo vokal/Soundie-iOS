@@ -26,10 +26,3 @@ git:
   depth: 10000  # For the auto-incrementing build number script to work, we need to clone with a basically-infinite depth.
 cache: bundler  # After main-repo builds, save the "bundler" (local Ruby gems) stuff to cache for future builds.
 addons:
-  artifacts:  # Artifacts are only uploaded on main-repo builds, not pull requests.
-    paths:
-    - $TRAVIS_BUILD_DIR/$APPNAME.ipa
-    - $TRAVIS_BUILD_DIR/$APPNAME.app.dSYM.zip
-    key: AKIAJVXNWLRNIG5NSUPQ
-    secret: 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
-    bucket: vokaltravis
