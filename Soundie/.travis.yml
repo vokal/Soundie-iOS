@@ -1,4 +1,4 @@
-language: objective-c
+language: swift
 before_install:
   - brew update > /dev/null; if brew outdated | grep -qx xctool; then brew upgrade xctool; fi  # Ensure that xctool is up-to-date
 before_script:
@@ -13,9 +13,9 @@ env:
   global:
   - XC_WORKSPACE="Soundie.xcworkspace"  # Put your workspace filename (or path relative to the root of the repo) here.
   - XC_PROJECT="Soundie.xcodeproj"  # Put your project filename (or path relative to the root of the repo) here.
-  - XC_SCHEME="FIXME Ad-Hoc"  # Put your SHARED scheme name here.
+  - XC_SCHEME="Soundie Ad-Hoc"  # Put your SHARED scheme name here.
   - XC_CONFIGURATION="Ad-Hoc"  # Put your build configuration name here.
-  - SDK_VERSION=8.1
+  - SDK_VERSION=8.0
   - APPNAME="Soundie"  # Put your app name here.
   - TESTFLIGHT_API_TOKEN="FIXME"  # Put your Old TestFlight API Token here.
   - TESTFLIGHT_TEAM_TOKEN="FIXME"  # Put your Old TestFlight Team Token here.
