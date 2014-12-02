@@ -3,13 +3,13 @@ before_install:
   - brew update > /dev/null; if brew outdated | grep -qx xctool; then brew upgrade xctool; fi  # Ensure that xctool is up-to-date
 before_script:
   - chmod +x travis/build.sh travis/add-key.sh travis/remove-key.sh travis/distribute.sh  # Ensure that scripts are executable
-  - ./travis/add-key.sh  # Import any keys and certificates into the keychain.
+ # - ./travis/add-key.sh  # Import any keys and certificates into the keychain.
 script: ./travis/build.sh  # Primary (simulator) build & test.
 after_success:
   #*****Removed this since there is nothing to distribute yet.  Add back in later once farter along with the project.********
   #- ./travis/distribute.sh  # On main-repo builds (after merge, etc.), distribute to TestFlight, iTunes Connect, etc.
 after_script:
-  - ./travis/remove-key.sh  # Nuke the keychain.
+ # - ./travis/remove-key.sh  # Nuke the keychain.
 env:
   global:
   - XC_WORKSPACE="Soundie.xcworkspace"  # Put your workspace filename (or path relative to the root of the repo) here.
