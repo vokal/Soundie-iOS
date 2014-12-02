@@ -6,7 +6,8 @@ before_script:
   - ./travis/add-key.sh  # Import any keys and certificates into the keychain.
 script: ./travis/build.sh  # Primary (simulator) build & test.
 after_success:
-  - ./travis/distribute.sh  # On main-repo builds (after merge, etc.), distribute to TestFlight, iTunes Connect, etc.
+  #*****Removed this since there is nothing to distribute yet.  Add back in later once farter along with the project.********
+  #- ./travis/distribute.sh  # On main-repo builds (after merge, etc.), distribute to TestFlight, iTunes Connect, etc.
 after_script:
   - ./travis/remove-key.sh  # Nuke the keychain.
 env:
