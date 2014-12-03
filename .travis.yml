@@ -1,3 +1,5 @@
+before_install:
+  - brew update > /dev/null; if brew outdated | grep -qx xctool; then brew upgrade xctool; fi  # Ensure that xctool is up-to-date
 language: swift
 xcode_workspace: Soundie.xcworkspace
 xcode_scheme: Soundie Ad-Hoc
