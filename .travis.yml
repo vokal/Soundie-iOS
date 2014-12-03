@@ -3,5 +3,5 @@
 language: objective-c
 xcode_project: Soundie/Soundie.xcodeproj
 xcode_scheme: Soundie Ad-Hoc
-xcode_sdk: iphonesimulator8.0
-#osx_image: xcode61
+xcode_sdk: iphonesimulator8.1
+osx_image: xcode61
