@@ -1,0 +1,1 @@
+PODS_VOKODER_OTHER_LDFLAGS = -framework "CoreData"

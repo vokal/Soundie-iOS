@@ -1,0 +1,6 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ILGHttpConstants" "${PODS_ROOT}/Headers/Public/SSKeychain" "${PODS_ROOT}/Headers/Public/VOKBenkode" "${PODS_ROOT}/Headers/Public/VOKMockUrlProtocol" "${PODS_ROOT}/Headers/Public/Vokoder" "${PODS_ROOT}/Headers/Public/gtm-http-fetcher" "${PODS_ROOT}/Headers/Public/gtm-oauth2" "${PODS_ROOT}/Headers/Public/iCarousel"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/ILGHttpConstants" -isystem "${PODS_ROOT}/Headers/Public/SSKeychain" -isystem "${PODS_ROOT}/Headers/Public/VOKBenkode" -isystem "${PODS_ROOT}/Headers/Public/VOKMockUrlProtocol" -isystem "${PODS_ROOT}/Headers/Public/Vokoder" -isystem "${PODS_ROOT}/Headers/Public/gtm-http-fetcher" -isystem "${PODS_ROOT}/Headers/Public/gtm-oauth2" -isystem "${PODS_ROOT}/Headers/Public/iCarousel"
+OTHER_LDFLAGS = -ObjC -l"Pods-ILGHttpConstants" -l"Pods-SSKeychain" -l"Pods-VOKBenkode" -l"Pods-VOKMockUrlProtocol" -l"Pods-Vokoder" -l"Pods-gtm-http-fetcher" -l"Pods-gtm-oauth2" -l"Pods-iCarousel" -framework "CoreData" -framework "Foundation" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods

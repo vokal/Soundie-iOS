@@ -1,0 +1,31 @@
+PODS:
+  - gtm-http-fetcher (1.0.141)
+  - gtm-oauth2 (1.0.125):
+    - gtm-http-fetcher (~> 1.0.141)
+  - iCarousel (1.7.6)
+  - ILGHttpConstants (1.0.0)
+  - SSKeychain (1.2.2)
+  - VOKBenkode (0.2.1)
+  - VOKMockUrlProtocol (2.0.2):
+    - ILGHttpConstants (~> 1.0.0)
+    - VOKBenkode (~> 0.2.1)
+  - Vokoder (1.0.14):
+    - iCarousel (~> 1.7.3)
+
+DEPENDENCIES:
+  - gtm-oauth2 (~> 1.0.125)
+  - SSKeychain (~> 1.2.2)
+  - VOKMockUrlProtocol (~> 2.0)
+  - Vokoder (~> 1.0.13)
+
+SPEC CHECKSUMS:
+  gtm-http-fetcher: 6d4617e7d343b6e4c082b777541c334eb6f5d81e
+  gtm-oauth2: 3f97d22a6066a80df0b1f878c1ce41176472daad
+  iCarousel: c35a4e26b3c657847e523012b593e70ddbd84992
+  ILGHttpConstants: 6e9661f7011c8b0dee57440e1e4c1a65ecfc0e6d
+  SSKeychain: cc48bd3ad24fcd9125adb9e0d23dd50b8bbd08b9
+  VOKBenkode: 237416420e36f2f2da93f06f2db50f85a5250df7
+  VOKMockUrlProtocol: 02edf4bf92b3e3288e6a795dbc5086b5bc6c7f0d
+  Vokoder: dfb04616f374f2551c09278342a28e478e32d14c
+
+COCOAPODS: 0.35.0
