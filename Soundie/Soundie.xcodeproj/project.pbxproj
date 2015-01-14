@@ -15,6 +15,7 @@
 		E8C459141A2D152D00A1BCEE /* SoundieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C459131A2D152D00A1BCEE /* SoundieTests.swift */; };
 		E8C459441A2E18F300A1BCEE /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E8C4593D1A2E16F700A1BCEE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E8C459451A2E1CED00A1BCEE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C4593D1A2E16F700A1BCEE /* Alamofire.framework */; };
+		F38F7FE5C4AF491D2EFD6310 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B37F5E72AFA2DAFDF6D8BA /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		12827A78046AF19F022E54C1 /* Pods.ad-hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods.ad-hoc.xcconfig"; path = "Pods/Target Support Files/Pods/Pods.ad-hoc.xcconfig"; sourceTree = "<group>"; };
+		35DB70A7C1DC2549DF6DFE42 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		37B37F5E72AFA2DAFDF6D8BA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6264E7C11736FF476C10EF88 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E8C458E61A2D152D00A1BCEE /* Soundie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soundie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C458EA1A2D152D00A1BCEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8C458EB1A2D152D00A1BCEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8C459451A2E1CED00A1BCEE /* Alamofire.framework in Frameworks */,
+				F38F7FE5C4AF491D2EFD6310 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +101,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		646B37A3A2020EA45F922CE2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6264E7C11736FF476C10EF88 /* Pods.debug.xcconfig */,
+				35DB70A7C1DC2549DF6DFE42 /* Pods.release.xcconfig */,
+				12827A78046AF19F022E54C1 /* Pods.ad-hoc.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D6A4FB23EBEC8B0EF6C16C28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37B37F5E72AFA2DAFDF6D8BA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E8C458DD1A2D152D00A1BCEE = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +126,8 @@
 				E8C459101A2D152D00A1BCEE /* SoundieTests */,
 				E8C458E71A2D152D00A1BCEE /* Products */,
 				E8C459371A2E16F700A1BCEE /* Alamofire.xcodeproj */,
+				646B37A3A2020EA45F922CE2 /* Pods */,
+				D6A4FB23EBEC8B0EF6C16C28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,10 +250,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8C459171A2D152D00A1BCEE /* Build configuration list for PBXNativeTarget "Soundie" */;
 			buildPhases = (
+				B6753A09C4A4AB7809A1F79E /* Check Pods Manifest.lock */,
 				E8C458E21A2D152D00A1BCEE /* Sources */,
 				E8C458E31A2D152D00A1BCEE /* Frameworks */,
 				E8C458E41A2D152D00A1BCEE /* Resources */,
 				E8C459431A2E18DA00A1BCEE /* Copy Frameworks */,
+				45576C8B7042DCCB5084C025 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -336,6 +364,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45576C8B7042DCCB5084C025 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6753A09C4A4AB7809A1F79E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E8C458E21A2D152D00A1BCEE /* Sources */ = {
@@ -471,6 +532,7 @@
 		};
 		E8C459181A2D152D00A1BCEE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6264E7C11736FF476C10EF88 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Soundie/Info.plist;
@@ -482,6 +544,7 @@
 		};
 		E8C459191A2D152D00A1BCEE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35DB70A7C1DC2549DF6DFE42 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Soundie/Info.plist;
@@ -562,6 +625,7 @@
 		};
 		E8C459491A2E4BA500A1BCEE /* Ad-Hoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12827A78046AF19F022E54C1 /* Pods.ad-hoc.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Soundie/Info.plist;

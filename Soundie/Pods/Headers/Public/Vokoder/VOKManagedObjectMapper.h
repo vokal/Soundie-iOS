@@ -1,0 +1,1 @@
+../../../Vokoder/VOKCoreDataManager/VOKManagedObjectMapper.h
