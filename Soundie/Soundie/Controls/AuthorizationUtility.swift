@@ -14,23 +14,15 @@ class AuthorizationUtility : NetworkingBaseClass {
     private let authorizationURLString = "https://soundcloud.com/connect"
     private let tokenUrlString = NetworkingBaseClass.apiStringForPath("oauth2/token")
     
-    var isUserLoggedIn: Bool {
-        get{
-            if self.accessToken != nil {
-                return true
-            } else {
-                return false
-            }
-        }
+    func isUserLoggedIn() -> Bool {
+           return self.accessToken != nil
     }
     
-    func authorizeSoundCloud(completionClosure:(success: Bool, error: NSError?)->()) -> (GTMOAuth2ViewControllerTouch?)
-    {
-        func soundCloudAuth() -> GTMOAuth2Authentication
-        {
+    func authorizeSoundCloud(completionClosure:(success: Bool, error: NSError?) -> ()) -> (GTMOAuth2ViewControllerTouch?) {
+        func soundCloudAuth() -> GTMOAuth2Authentication {
             let tokenURL = NSURL(string: tokenUrlString)
             
-            var auth = GTMOAuth2Authentication.authenticationWithServiceProvider(serviceName,
+            var auth = GTMOAuth2Authentication.authenticationWithServiceProvider(serviceName(),
                                                                                  tokenURL: tokenURL,
                                                                                  redirectURI: SoundCloudRedirectUri,
                                                                                  clientID: SoundCloudClientID,
@@ -53,14 +45,15 @@ class AuthorizationUtility : NetworkingBaseClass {
                 completionClosure(success: false, error: err)
             }
         } as GTMOAuth2ViewControllerTouch
-
-        //TODO:might need to figure out why this can't be assigned
-//        authViewController.browserCookiesURL = NSURL(string: apiBaseUrlString)
+        
+        if let baseUrlString = NetworkingBaseClass.apiUrlForPath("") {
+            authViewController.browserCookiesURL = baseUrlString
+        }
         
         return authViewController
     }
     
     private func saveAccessToken(accessToken: String) {
-        SSKeychain.setPassword(accessToken, forService: serviceName, account: accountName)
+        SSKeychain.setPassword(accessToken, forService: serviceName(), account: accountName())
     }
 }

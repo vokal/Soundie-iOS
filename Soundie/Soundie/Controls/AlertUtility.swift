@@ -11,11 +11,11 @@ import Foundation
 import UIKit
 
 class AlertUtility {
-    enum alertType {
+    enum AlertType {
         case AuthenticationFailure
     }
     
-    class func createAlertController (type: alertType) -> UIAlertController {
+    class func createAlertController(type: AlertType) -> UIAlertController {
         var alertController: UIAlertController
         
         switch type { 

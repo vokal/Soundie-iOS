@@ -11,17 +11,17 @@ import UIKit
 
 class LoginViewController : UIViewController {
     
-    private var authorizeHelper = AuthorizationUtility()
+    private let authorizeHelper = AuthorizationUtility()
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        if authorizeHelper.isUserLoggedIn {
+        if authorizeHelper.isUserLoggedIn() {
             self.showStreamView()
         } //TODO:need to handle if authToken Expires
     }
     
     @IBAction private func loginToSoundCloud(sender: UIButton) {
-        let authorizeClosure: ((success: Bool, error: NSError?)->()) = { [unowned self] (success: Bool, error: NSError?) in
+        let authorizeClosure: ((success: Bool, error: NSError?) -> ()) = { [unowned self] (success: Bool, error: NSError?) in //TODO: might be able to remove this closure if the showStreamView is kept in the viewDidAppear.
             if success {
                 self.showStreamView()
             } else {
@@ -37,7 +37,7 @@ class LoginViewController : UIViewController {
     }
     
     private func showStreamView() {
-        self.performSegueWithIdentifier("LoggedInSegue", sender: self);
+        self.performSegueWithIdentifier("LoggedInSegue", sender: self)
     }
 }
 
