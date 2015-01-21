@@ -12,24 +12,19 @@ import UIKit
 
 class AlertUtility {
     enum alertType {
-        case AuthenticationSuccess
-        case AuthenticationFailer
+        case AuthenticationFailure
     }
     
     class func createAlertController (type: alertType) -> UIAlertController {
         var alertController: UIAlertController
         
-        switch type { //TODO: Make Localized
-        case .AuthenticationSuccess :
-            alertController = UIAlertController(title: "Authorization Successful",
-                                                message: "You have successfully authorized Soundie!",
-                                                preferredStyle: .Alert)
-        case .AuthenticationFailer :
-            alertController = UIAlertController(title: "Error",
-                                                message: "There was an error Authenticating Please Try again",
+        switch type { 
+        case .AuthenticationFailure :
+            alertController = UIAlertController(title: NSLocalizedString("Error", comment: "Alert Title For Authentication Failure"),
+                                                message: NSLocalizedString("There was an error Authenticating Please Try again", comment: "Alert Message For Authentication Failure") ,
                                                 preferredStyle: .Alert)
         }
-        alertController.addAction(UIAlertAction(title: "Dismiss",
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("Dismiss", comment: "Title for dismiss button"),
                                                 style: .Cancel,
                                                 handler: nil))
         

@@ -13,11 +13,7 @@ class NetworkingBaseClass {
     let serviceName = "SoundCloud Developer API"
     let accountName = "Soundie"
     
-    class var accessToken: String? {
-        get { //TODO:Figure out better way to do this so the properties can be used in here
-            return SSKeychain.passwordForService("SoundCloud Developer API", account: "Soundie")
-        }
-    }
+    var accessToken: String? = SSKeychain.passwordForService("SoundCloud Developer API", account: "Soundie")
 
     class func apiUrlForPath(pathString: String) -> NSURL {
         return NSURL(string: apiStringForPath(pathString))!

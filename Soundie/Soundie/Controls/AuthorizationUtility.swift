@@ -12,9 +12,7 @@ class AuthorizationUtility : NetworkingBaseClass {
     
     //Mark: Url's
     private let authorizationURLString = "https://soundcloud.com/connect"
-    private var tokenUrlString: String {
-            return NetworkingBaseClass.apiStringForPath("oauth2/token")
-    }
+    private let tokenUrlString = NetworkingBaseClass.apiStringForPath("oauth2/token")
     
     
     func authorizeSoundCloud(completionClosure:(success: Bool, error: NSError?)->()) -> (GTMOAuth2ViewControllerTouch?)
@@ -38,12 +36,12 @@ class AuthorizationUtility : NetworkingBaseClass {
                                                                                            authorizationURL: authUrl,
                                                                                            keychainItemName: nil) { [unowned self]
                                                                                             (viewController: GTMOAuth2ViewControllerTouch!, auth: GTMOAuth2Authentication!,err: NSError!) -> Void in
-            if let authExists = auth {
-                println(err)
-                completionClosure(success: false, error: err)
-            } else {
+            if auth.accessToken != nil {
                 self.saveAccessToken(auth.accessToken)
                 completionClosure(success: true, error: nil)
+            } else {
+                println(err)
+                completionClosure(success: false, error: err)
             }
         } as GTMOAuth2ViewControllerTouch
 

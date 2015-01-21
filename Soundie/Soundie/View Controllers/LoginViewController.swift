@@ -13,17 +13,13 @@ class LoginViewController : UIViewController {
     
     private var authorizeHelper = AuthorizationUtility()
     
-    override func viewDidLoad() {
-        
-    }
-    
     @IBAction private func loginToSoundCloud(sender: UIButton) {
         let authorizeClosure: ((success: Bool, error: NSError?)->()) = { [unowned self] (success: Bool, error: NSError?) in
             if success {
                 self.performSegueWithIdentifier("LoggedInSegue", sender: self);
             } else {
                 println(error)
-                let alert = AlertUtility.createAlertController(.AuthenticationFailer)
+                let alert = AlertUtility.createAlertController(.AuthenticationFailure)
                 self.presentViewController(alert, animated: true, completion: nil)
             }
         }
