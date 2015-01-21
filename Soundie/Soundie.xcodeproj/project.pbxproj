@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E87A81271A6EF84E000AB754 /* AuthorizationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A81261A6EF84E000AB754 /* AuthorizationUtility.swift */; };
+		E87A81291A6EF8A4000AB754 /* NetworkingBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A81281A6EF8A4000AB754 /* NetworkingBaseClass.swift */; };
+		E87A812C1A6EF913000AB754 /* AlertUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A812B1A6EF913000AB754 /* AlertUtility.swift */; };
+		E87A812F1A6EF94F000AB754 /* SNDObfuscation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A812D1A6EF94F000AB754 /* SNDObfuscation.swift */; };
+		E87A81321A6F008A000AB754 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A81301A6F008A000AB754 /* LoginViewController.swift */; };
+		E87A81331A6F008A000AB754 /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A81311A6F008A000AB754 /* StreamViewController.swift */; };
 		E8C458EC1A2D152D00A1BCEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C458EB1A2D152D00A1BCEE /* AppDelegate.swift */; };
-		E8C459001A2D152D00A1BCEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C458FF1A2D152D00A1BCEE /* ViewController.swift */; };
 		E8C459031A2D152D00A1BCEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8C459011A2D152D00A1BCEE /* Main.storyboard */; };
 		E8C459051A2D152D00A1BCEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C459041A2D152D00A1BCEE /* Images.xcassets */; };
 		E8C459081A2D152D00A1BCEE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8C459061A2D152D00A1BCEE /* LaunchScreen.xib */; };
@@ -68,10 +73,16 @@
 		35DB70A7C1DC2549DF6DFE42 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		37B37F5E72AFA2DAFDF6D8BA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6264E7C11736FF476C10EF88 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E87A81261A6EF84E000AB754 /* AuthorizationUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationUtility.swift; sourceTree = "<group>"; };
+		E87A81281A6EF8A4000AB754 /* NetworkingBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingBaseClass.swift; sourceTree = "<group>"; };
+		E87A812B1A6EF913000AB754 /* AlertUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertUtility.swift; sourceTree = "<group>"; };
+		E87A812D1A6EF94F000AB754 /* SNDObfuscation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNDObfuscation.swift; sourceTree = "<group>"; };
+		E87A812E1A6EF94F000AB754 /* Soundie-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Soundie-Bridging-Header.h"; sourceTree = "<group>"; };
+		E87A81301A6F008A000AB754 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E87A81311A6F008A000AB754 /* StreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
 		E8C458E61A2D152D00A1BCEE /* Soundie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soundie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C458EA1A2D152D00A1BCEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8C458EB1A2D152D00A1BCEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E8C458FF1A2D152D00A1BCEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		E8C459021A2D152D00A1BCEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8C459041A2D152D00A1BCEE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E8C459071A2D152D00A1BCEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -117,6 +128,30 @@
 				37B37F5E72AFA2DAFDF6D8BA /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E87A81231A6EF783000AB754 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E87A81251A6EF83D000AB754 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E87A81261A6EF84E000AB754 /* AuthorizationUtility.swift */,
+				E87A81281A6EF8A4000AB754 /* NetworkingBaseClass.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		E87A812A1A6EF8FE000AB754 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				E87A812B1A6EF913000AB754 /* AlertUtility.swift */,
+			);
+			name = Alerts;
 			sourceTree = "<group>";
 		};
 		E8C458DD1A2D152D00A1BCEE = {
@@ -176,6 +211,8 @@
 		E8C458F91A2D152D00A1BCEE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E87A812D1A6EF94F000AB754 /* SNDObfuscation.swift */,
+				E87A812E1A6EF94F000AB754 /* Soundie-Bridging-Header.h */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -190,6 +227,7 @@
 		E8C458FB1A2D152D00A1BCEE /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E87A81231A6EF783000AB754 /* Models */,
 			);
 			path = "Data Sources";
 			sourceTree = "<group>";
@@ -197,6 +235,8 @@
 		E8C458FC1A2D152D00A1BCEE /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				E87A812A1A6EF8FE000AB754 /* Alerts */,
+				E87A81251A6EF83D000AB754 /* Networking */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -204,7 +244,8 @@
 		E8C458FD1A2D152D00A1BCEE /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E8C458FF1A2D152D00A1BCEE /* ViewController.swift */,
+				E87A81301A6F008A000AB754 /* LoginViewController.swift */,
+				E87A81311A6F008A000AB754 /* StreamViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -403,8 +444,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8C459001A2D152D00A1BCEE /* ViewController.swift in Sources */,
+				E87A81321A6F008A000AB754 /* LoginViewController.swift in Sources */,
+				E87A81291A6EF8A4000AB754 /* NetworkingBaseClass.swift in Sources */,
 				E8C458EC1A2D152D00A1BCEE /* AppDelegate.swift in Sources */,
+				E87A812F1A6EF94F000AB754 /* SNDObfuscation.swift in Sources */,
+				E87A81271A6EF84E000AB754 /* AuthorizationUtility.swift in Sources */,
+				E87A812C1A6EF913000AB754 /* AlertUtility.swift in Sources */,
+				E87A81331A6F008A000AB754 /* StreamViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +585,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Soundie/Resources/Soundie-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -551,6 +598,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Soundie/Resources/Soundie-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -632,6 +680,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Soundie/Resources/Soundie-Bridging-Header.h";
 			};
 			name = "Ad-Hoc";
 		};
