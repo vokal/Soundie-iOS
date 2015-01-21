@@ -13,10 +13,17 @@ class LoginViewController : UIViewController {
     
     private var authorizeHelper = AuthorizationUtility()
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if authorizeHelper.isUserLoggedIn {
+            self.showStreamView()
+        } //TODO:need to handle if authToken Expires
+    }
+    
     @IBAction private func loginToSoundCloud(sender: UIButton) {
         let authorizeClosure: ((success: Bool, error: NSError?)->()) = { [unowned self] (success: Bool, error: NSError?) in
             if success {
-                self.performSegueWithIdentifier("LoggedInSegue", sender: self);
+                self.showStreamView()
             } else {
                 println(error)
                 let alert = AlertUtility.createAlertController(.AuthenticationFailure)
@@ -27,6 +34,10 @@ class LoginViewController : UIViewController {
         if let viewControllerToPush = authorizeHelper.authorizeSoundCloud(authorizeClosure) {
             self.navigationController?.pushViewController(viewControllerToPush, animated: true)
         }
+    }
+    
+    private func showStreamView() {
+        self.performSegueWithIdentifier("LoggedInSegue", sender: self);
     }
 }
 

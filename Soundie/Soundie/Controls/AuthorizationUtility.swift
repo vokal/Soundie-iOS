@@ -10,10 +10,19 @@ import Foundation
 
 class AuthorizationUtility : NetworkingBaseClass {
     
-    //Mark: Url's
+    //MARK: URL's
     private let authorizationURLString = "https://soundcloud.com/connect"
     private let tokenUrlString = NetworkingBaseClass.apiStringForPath("oauth2/token")
     
+    var isUserLoggedIn: Bool {
+        get{
+            if self.accessToken != nil {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
     
     func authorizeSoundCloud(completionClosure:(success: Bool, error: NSError?)->()) -> (GTMOAuth2ViewControllerTouch?)
     {
