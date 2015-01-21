@@ -31,11 +31,7 @@ class NetworkingBaseClass {
     :returns: Will return an NSURL for the api as long as the pathString is well formed.
     */
     class func apiUrlForPath(pathString: String) -> NSURL? {
-        if let newUrl = NSURL(string: apiStringForPath(pathString)) {
-            return newUrl
-        } else {
-            return nil
-        }
+        return NSURL(string: apiStringForPath(pathString))
     }
     
     class func apiStringForPath(pathString: String) -> String {
