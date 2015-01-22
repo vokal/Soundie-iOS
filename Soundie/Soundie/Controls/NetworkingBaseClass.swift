@@ -13,7 +13,7 @@ class NetworkingBaseClass {
     private let privateServiceName = "SoundCloud Developer API"
     private let privateAccountName = "Soundie"
     
-    //These lets the private constants be publically accessble in only the module
+    //These let the private constants be internally accessible in only the module
     func serviceName() -> String {
         return privateServiceName
     }
