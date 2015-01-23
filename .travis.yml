@@ -1,7 +1,16 @@
 before_install:
-  - brew update > /dev/null; if brew outdated | grep -qx xctool; then brew upgrade xctool; fi  # Ensure that xctool is up-to-date
+- brew update > /dev/null; if brew outdated | grep -qx xctool; then brew upgrade xctool;
+  fi
 language: objective-c
+before_script:
+- chmod +x travis/addClient-key-secret.sh
+- travis/addClient-key-secret.sh
 xcode_workspace: Soundie/Soundie.xcworkspace
 xcode_scheme: Soundie Ad-Hoc
 xcode_sdk: iphonesimulator8.1
 osx_image: xcode611
+env:
+  global:
+  - secure: BmhzNDdhNOuABz/vjE72Dp4k9ozoRRrG7sUdDU8nVPRf/O9KX5O/ZLkMuIdu7BbnZMyCUfmcTAtXnfXZLdgxXgtlB+gja5+//CV4+4zbzcn6713FmU4q5zIDKxq7rboXj2hxIL0Jp7lTDIhdsqupZ5e/Vav6erBYb7bzO1l/b+s= #SOUNDCLOUD_CLIENT_ID
+  - secure: dDPV+Q59LLoKtdEc83zqVQvyerOCDS4tM2OCQ+wQMSvLEKr6qWJLj3eM6KaMHDQ0cRwDjg59rJIpiQh3wjElhqcqvmXcFIiY034KFh7Fr1PKvcnOMmnvqExXYa/TOS/EF4HdHO9gC0odxEABPVI4AL48Lr16UhwJp9lAdrmoj4U= #SoundCloudClientSecret
+  - secure: Zju+CZYqoPJNaXN7t5qNNBbV5ixE0aXl7v+ejJoWj/drsfQM6eADrdX7XY49DFRPvwuJbmt2qTifgll174SJGXN+CB6AQPeFtyC1C9dMix3ewART2EB3LkE8h6Jtsd6TJ2WsMX+u/q3bYyxmDmB/bl5kPqwBCqKiM44zGGqx3CI= #SoundCloudRedirectUri This might be wrong because of my attempt to \-escape the '/' characters in the url when running "travis encrypt"
