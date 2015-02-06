@@ -1,6 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
+link_with 'Soundie', 'SoundieTests'
+
 pod 'Vokoder', '~> 1.0.13'
 pod 'gtm-oauth2', '~> 1.0.125'
 pod 'SSKeychain', '~> 1.2.2'
